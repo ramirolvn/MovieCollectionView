@@ -7,21 +7,20 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieCVCell: UICollectionViewCell {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieImageView: SDAnimatedImageView!
     @IBOutlet weak var titleMovieLabel: UILabel!
-    @IBOutlet weak var actyIndicator: UIActivityIndicatorView!
     
     
     // MARK: - View Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.actyIndicator.startAnimating()
     }
     
     
@@ -29,6 +28,8 @@ class MovieCVCell: UICollectionViewCell {
     
     func configureCell(movie: Movie) {
         titleMovieLabel.text = movie.title
+        movieImageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
+        movieImageView.sd_setImage(with: URL(string: movie.image))
     }
     
 }

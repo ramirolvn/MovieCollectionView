@@ -17,7 +17,6 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
-    @IBOutlet weak var actyIndicator: UIActivityIndicatorView!
     
     
     // MARK: - Properties
@@ -50,9 +49,6 @@ class DetailsVC: UIViewController {
         if let movie = selectedMovie {
             
             self.navigationItem.title = movie.title
-            
-            movieImageView.layer.cornerRadius = 10
-            movieImageView.clipsToBounds = true
             
             durationLabel.text = movie.duration
             yearLabel.text = movie.year

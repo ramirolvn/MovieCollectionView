@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-P4-AIK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-P4-AIK" customClass="SDAnimatedImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="212.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="21E-vU-0i9">
@@ -44,18 +44,12 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hhe-pt-oev">
-                                                    <rect key="frame" x="51.5" y="88" width="37" height="37"/>
-                                                    <color key="color" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="hhe-pt-oev" firstAttribute="centerX" secondItem="3W9-P4-AIK" secondAttribute="centerX" id="EJh-lA-cLA"/>
                                             <constraint firstItem="21E-vU-0i9" firstAttribute="leading" secondItem="lYa-zg-Ob6" secondAttribute="leading" id="Fgu-0p-Oh5"/>
                                             <constraint firstItem="3W9-P4-AIK" firstAttribute="top" secondItem="lYa-zg-Ob6" secondAttribute="top" id="H7u-2H-M4a"/>
                                             <constraint firstAttribute="bottom" secondItem="21E-vU-0i9" secondAttribute="bottom" id="RHg-H2-kyu"/>
-                                            <constraint firstItem="hhe-pt-oev" firstAttribute="centerY" secondItem="3W9-P4-AIK" secondAttribute="centerY" id="T2S-GL-8AV"/>
                                             <constraint firstItem="21E-vU-0i9" firstAttribute="top" secondItem="3W9-P4-AIK" secondAttribute="bottom" id="fmY-4W-6AC"/>
                                             <constraint firstItem="3W9-P4-AIK" firstAttribute="height" secondItem="lYa-zg-Ob6" secondAttribute="height" multiplier="0.85" id="hXt-5a-hQS"/>
                                             <constraint firstAttribute="trailing" secondItem="21E-vU-0i9" secondAttribute="trailing" id="m1B-Uj-WcZ"/>
@@ -63,7 +57,6 @@
                                             <constraint firstAttribute="trailing" secondItem="3W9-P4-AIK" secondAttribute="trailing" id="umP-ic-AME"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="actyIndicator" destination="hhe-pt-oev" id="SPF-OM-vqq"/>
                                             <outlet property="movieImageView" destination="3W9-P4-AIK" id="ikP-nX-pqC"/>
                                             <outlet property="titleMovieLabel" destination="21E-vU-0i9" id="1li-Jn-hhu"/>
                                         </connections>
@@ -74,7 +67,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uma seleção de filmes imperdíveis:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy1-gI-u4n">
-                                            <rect key="frame" x="15" y="5" width="290" height="20"/>
+                                            <rect key="frame" x="15" y="5" width="384" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -185,10 +178,6 @@
                                             <constraint firstAttribute="width" constant="150" id="dZ5-m2-S03"/>
                                         </constraints>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-86-n3J">
-                                        <rect key="frame" x="72.5" y="101.5" width="37" height="37"/>
-                                        <color key="color" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1a-dA-xsc">
                                         <rect key="frame" x="16" y="235" width="76.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -206,10 +195,8 @@
                                     <constraint firstItem="0XO-O5-YzB" firstAttribute="leading" secondItem="XTO-MP-SX5" secondAttribute="leading" constant="16" id="3xz-c8-Pal"/>
                                     <constraint firstItem="U1a-dA-xsc" firstAttribute="top" secondItem="0XO-O5-YzB" secondAttribute="bottom" constant="15" id="By8-uw-Uwc"/>
                                     <constraint firstItem="mbG-oy-Q4u" firstAttribute="top" secondItem="0XO-O5-YzB" secondAttribute="top" id="DHw-Wl-qm0"/>
-                                    <constraint firstItem="N4t-86-n3J" firstAttribute="centerX" secondItem="0XO-O5-YzB" secondAttribute="centerX" id="J6R-tE-PqA"/>
                                     <constraint firstAttribute="trailing" secondItem="60p-9u-1OH" secondAttribute="trailing" constant="17" id="Mh5-Hh-kif"/>
                                     <constraint firstItem="b5M-S4-YN0" firstAttribute="leading" secondItem="mbG-oy-Q4u" secondAttribute="trailing" constant="5" id="Ped-ZQ-cnL"/>
-                                    <constraint firstItem="N4t-86-n3J" firstAttribute="centerY" secondItem="0XO-O5-YzB" secondAttribute="centerY" id="TW7-1z-Jzm"/>
                                     <constraint firstItem="0XO-O5-YzB" firstAttribute="top" secondItem="XTO-MP-SX5" secondAttribute="top" constant="20" id="Vge-Kg-Bl1"/>
                                     <constraint firstAttribute="bottom" secondItem="60p-9u-1OH" secondAttribute="bottom" constant="20" id="ZV9-O4-4x4"/>
                                     <constraint firstItem="0XO-O5-YzB" firstAttribute="leading" secondItem="U1a-dA-xsc" secondAttribute="leading" id="k7G-xj-IfU"/>
@@ -235,7 +222,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie Title" id="4Qt-8o-Mfj"/>
                     <connections>
-                        <outlet property="actyIndicator" destination="N4t-86-n3J" id="bqn-9z-kI1"/>
                         <outlet property="durationLabel" destination="7BM-wJ-xyo" id="zph-m5-Zad"/>
                         <outlet property="movieImageView" destination="0XO-O5-YzB" id="TQk-TO-FoJ"/>
                         <outlet property="overviewLabel" destination="60p-9u-1OH" id="jEI-Oi-1Ns"/>
