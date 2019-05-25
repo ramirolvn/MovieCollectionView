@@ -24,8 +24,8 @@ pod install
 Necessário Swift 4.2 e Xcode 10.
 
 ## ScreensShoots
-![picture](https://bitbucket.org/ramirolvn/skytest/raw/4331058b4815ff6886093a3970287527a8d650f6/screens/s1.png)
-![picture](https://bitbucket.org/ramirolvn/skytest/raw/4331058b4815ff6886093a3970287527a8d650f6/screens/s2.png)
-![picture](https://bitbucket.org/ramirolvn/skytest/raw/4331058b4815ff6886093a3970287527a8d650f6/screens/s3.png)
-![picture](https://bitbucket.org/ramirolvn/skytest/raw/4331058b4815ff6886093a3970287527a8d650f6/screens/s4.png)
+![Alt text](/../master/screens/s1.png?raw=true "Screen 1")
+![Alt text](/../master/screens/s2.png?raw=true "Screen 2")
+![Alt text](/../master/screens/s3.png?raw=true "Screen 3")
+![Alt text](/../master/screens/s4.png?raw=true "Screen 4")
 
