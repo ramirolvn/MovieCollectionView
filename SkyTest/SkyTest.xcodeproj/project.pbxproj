@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991CB1412298BB9700E0185B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CB1402298BB9700E0185B /* DataService.swift */; };
+		991CB1442298BEF200E0185B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CB1432298BEF200E0185B /* MoviesViewModel.swift */; };
+		991CB1462298C79000E0185B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CB1452298C79000E0185B /* Extension.swift */; };
+		991CB1482298D3A900E0185B /* FakeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CB1472298D3A900E0185B /* FakeDataService.swift */; };
 		A94015281EF4897920FDD299 /* Pods_SkyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775F50B2146B64AE90A8F59B /* Pods_SkyTestTests.framework */; };
 		B1F37CEEFA33B9722FE761AC /* Pods_SkyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59931C4282A7A7C83E9C0F88 /* Pods_SkyTest.framework */; };
 		F16D4955229885DB00CB896A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4954229885DB00CB896A /* AppDelegate.swift */; };
@@ -14,8 +18,6 @@
 		F16D495C229885DC00CB896A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16D495B229885DC00CB896A /* Assets.xcassets */; };
 		F16D495F229885DC00CB896A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16D495D229885DC00CB896A /* LaunchScreen.storyboard */; };
 		F16D496A229885DC00CB896A /* SkyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4969229885DC00CB896A /* SkyTestTests.swift */; };
-		F16D49762298861900CB896A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D49752298861900CB896A /* Constants.swift */; };
-		F16D49782298862900CB896A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D49772298862900CB896A /* Alerts.swift */; };
 		F16D497B2298864D00CB896A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D497A2298864D00CB896A /* Movie.swift */; };
 		F16D497E2298866C00CB896A /* MovieCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D497D2298866C00CB896A /* MovieCCell.swift */; };
 		F16D49812298868700CB896A /* MoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D49802298868700CB896A /* MoviesVC.swift */; };
@@ -38,6 +40,10 @@
 		59931C4282A7A7C83E9C0F88 /* Pods_SkyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775F50B2146B64AE90A8F59B /* Pods_SkyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A2DCF7ED6011A2A94FBFC3 /* Pods-SkyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyTest.debug.xcconfig"; path = "Target Support Files/Pods-SkyTest/Pods-SkyTest.debug.xcconfig"; sourceTree = "<group>"; };
+		991CB1402298BB9700E0185B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		991CB1432298BEF200E0185B /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		991CB1452298C79000E0185B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		991CB1472298D3A900E0185B /* FakeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataService.swift; sourceTree = "<group>"; };
 		C0E5A2A15702A431796F2FE4 /* Pods-SkyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyTestTests.release.xcconfig"; path = "Target Support Files/Pods-SkyTestTests/Pods-SkyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		F16D4951229885DB00CB896A /* SkyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16D4954229885DB00CB896A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +54,6 @@
 		F16D4965229885DC00CB896A /* SkyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16D4969229885DC00CB896A /* SkyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyTestTests.swift; sourceTree = "<group>"; };
 		F16D496B229885DC00CB896A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F16D49752298861900CB896A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F16D49772298862900CB896A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		F16D497A2298864D00CB896A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F16D497D2298866C00CB896A /* MovieCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCCell.swift; sourceTree = "<group>"; };
 		F16D49802298868700CB896A /* MoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVC.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991CB13F2298BB8400E0185B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				991CB1402298BB9700E0185B /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		991CB1422298BED000E0185B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				991CB1432298BEF200E0185B /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9B54C530C7E8E50A79F3F35 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +139,8 @@
 		F16D4953229885DB00CB896A /* SkyTest */ = {
 			isa = PBXGroup;
 			children = (
-				F16D497F2298867800CB896A /* Controller */,
+				991CB1422298BED000E0185B /* ViewModel */,
+				991CB13F2298BB8400E0185B /* Service */,
 				F16D497C2298865800CB896A /* View */,
 				F16D49792298864200CB896A /* Model */,
 				F16D49742298860600CB896A /* Utils */,
@@ -136,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F16D4969229885DC00CB896A /* SkyTestTests.swift */,
+				991CB1472298D3A900E0185B /* FakeDataService.swift */,
 				F16D496B229885DC00CB896A /* Info.plist */,
 			);
 			path = SkyTestTests;
@@ -144,8 +166,7 @@
 		F16D49742298860600CB896A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F16D49752298861900CB896A /* Constants.swift */,
-				F16D49772298862900CB896A /* Alerts.swift */,
+				991CB1452298C79000E0185B /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,6 +182,7 @@
 		F16D497C2298865800CB896A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F16D497F2298867800CB896A /* Controller */,
 				F16D497D2298866C00CB896A /* MovieCCell.swift */,
 			);
 			path = View;
@@ -303,20 +325,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SkyTest/Pods-SkyTest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SkyTest/Pods-SkyTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SkyTest/Pods-SkyTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,12 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16D4955229885DB00CB896A /* AppDelegate.swift in Sources */,
-				F16D49782298862900CB896A /* Alerts.swift in Sources */,
 				F16D497B2298864D00CB896A /* Movie.swift in Sources */,
 				F16D497E2298866C00CB896A /* MovieCCell.swift in Sources */,
+				991CB1442298BEF200E0185B /* MoviesViewModel.swift in Sources */,
 				F16D49832298869900CB896A /* DetailsVC.swift in Sources */,
-				F16D49762298861900CB896A /* Constants.swift in Sources */,
 				F16D49812298868700CB896A /* MoviesVC.swift in Sources */,
+				991CB1412298BB9700E0185B /* DataService.swift in Sources */,
+				991CB1462298C79000E0185B /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991CB1482298D3A900E0185B /* FakeDataService.swift in Sources */,
 				F16D496A229885DC00CB896A /* SkyTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -506,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -572,7 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ramirolvn-sky-test.SkyTestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyTest.app/SkyTest";
 			};
@@ -594,7 +609,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ramirolvn-sky-test.SkyTestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyTest.app/SkyTest";
 			};

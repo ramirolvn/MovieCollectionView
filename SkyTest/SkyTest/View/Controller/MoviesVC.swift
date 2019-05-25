@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
 
 class MoviesVC: UIViewController {
     
@@ -19,14 +18,15 @@ class MoviesVC: UIViewController {
     @IBOutlet weak var noResultsLabel: UILabel!
     
     
+    
     // MARK: - Properties
     
     var movies = [Movie]()
     var numberOfMovies = Int()
     var selectedMovie: Movie?
     var detailsVC: DetailsVC?
-    var showAlerts = Alerts()
     var timer = Timer()
+    private var viewmodel = MoviesViewModel(dataService: DataService())
     
     struct Storyboard {
         static let showDetails = "showDetails"
@@ -38,7 +38,7 @@ class MoviesVC: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(MoviesVC.handleRefresh(_:)), for: UIControl.Event.valueChanged)
         
-        refreshControl.tintColor = UIColor.lightGray
+        refreshControl.tintColor = .lightGray
         refreshControl.attributedTitle = NSAttributedString(string: "Loading movies data...")
         
         return refreshControl
@@ -59,37 +59,24 @@ class MoviesVC: UIViewController {
     // MARK: - Funtions
     
     @objc func getMovies() {
-        
-        Alamofire.request(URL_API_SKY, method: .get).responseJSON
-            { response in
+        viewmodel.getMovies()
+        viewmodel.didFinishReq = {
+            if let movies = self.viewmodel.movies{
+                self.numberOfMovies = movies.count
+                self.movies = movies
+                self.moviesCollectionView.isHidden = false
+                self.noResultsLabel.isHidden = true
+                self.moviesCollectionView.reloadData()
+            }else{
+                self.alert(message: "Atenção", title: self.viewmodel.error!)
                 
-                if response.result.isSuccess {
-                    let result = response.result
-                    
-                    if let dict = result.value as? [Dictionary<String, AnyObject>] {
-                        
-                        // Update the number of movies
-                        self.numberOfMovies = dict.count
-                        
-                        self.moviesCollectionView.isHidden = false
-                        self.noResultsLabel.isHidden = true
-                        
-                        for obj in dict {
-                            let movie = Movie(movieDict: obj)
-                            self.movies.append(movie)
-                        }
-                        self.moviesCollectionView.reloadData()
-                    }
-                } else {
-                    
-                    self.showAlerts.exibirAlertaPersonalizado("Erro ao tentar obter os dados, tentar novamente mais tarde!", tipoAlerta: 2)
-                    
-                    self.moviesCollectionView.isHidden = true
-                    self.noResultsLabel.isHidden = false
-                    
-                    // Call the function to try get data
-                    self.tryAgainGetData()
-                }
+                self.moviesCollectionView.isHidden = true
+                self.noResultsLabel.isHidden = false
+                
+                // Call the function to try get data
+                self.tryAgainGetData()
+            }
+            
         }
     }
     

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class Movie {
+class Movie: Mappable {
     
     var _title: String!
     var _image: String!
@@ -67,40 +68,21 @@ class Movie {
         return _image3
     }
     
+    required init?(map: Map) {
+        self.mapping(map: map)
+    }
     
-    init(movieDict: Dictionary<String, AnyObject>) {
-        
-        if let title = movieDict["title"] as? String {
-            self._title = title
-        }
-        
-        if let image = movieDict["cover_url"] as? String {
-            self._image = image
-        }
-        
-        if let overview = movieDict["overview"] as? String {
-            self._overview = overview
-        }
-        
-        if let duration = movieDict["duration"] as? String {
-            self._duration = duration
-        }
-        
-        if let year = movieDict["release_year"] as? String {
-            self._year = year
-        }
-        
-        if let images = movieDict["backdrops_url"] as? [String] {
-            
-            if let image2 = images[0] as? String {
-                self._image2 = image2
-            }
-            
-            if let image3 = images[1] as? String {
-                self._image3 = image3
-            }
-        }
-        
+    // Mappable
+    func mapping(map: Map) {
+        var backdrops_url:[String]?
+        backdrops_url <- map["backdrops_url"]
+        _title    <- map["title"]
+        _image         <- map["cover_url"]
+        _overview      <- map["overview"]
+        _duration       <- map["duration"]
+        _year  <- map["release_year"]
+        _image2 = backdrops_url != nil && backdrops_url?.count ?? 0>0 ? backdrops_url![0] : ""
+        _image3 = backdrops_url != nil && backdrops_url?.count ?? 0>1 ? backdrops_url![1] : ""
     }
     
 }
